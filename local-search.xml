@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>python-study-1</title>
+    <title>Python学习笔记（一）</title>
     <link href="/2021/01/19/python-study-1/"/>
     <url>/2021/01/19/python-study-1/</url>
     
-    <content type="html"><![CDATA[<h1 id="python程序设计学习笔记（一）"><a href="#python程序设计学习笔记（一）" class="headerlink" title="python程序设计学习笔记（一）"></a>python程序设计学习笔记（一）</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="一、Python开发环境配置"><a href="#一、Python开发环境配置" class="headerlink" title="一、Python开发环境配置"></a>一、Python开发环境配置</h1><h2 id="Python语言概述"><a href="#Python语言概述" class="headerlink" title="Python语言概述"></a>Python语言概述</h2><ul><li>Python  /ˈpaiθən/ ，译为“蟒蛇”</li><li>Python语言拥有者是Python Software Foundation（PSF）<ul><li>PSF是非盈利组织，致力于保护Python语言开放、开源和发展</li></ul></li><li>Python语言创立者：Guido van Rossum<ul><li>2002年，Python 2.x</li><li>2008年，Python 3.x</li></ul></li><li>Python语言是一种解释型语言，是一个有开放、开源精神的编程语言</li><li>Python语言可应用于火星探测、搜索引擎、引力波分析等众多领域，是一种超级语言</li></ul><h2 id="Python基本开发环境IDLE介绍"><a href="#Python基本开发环境IDLE介绍" class="headerlink" title="Python基本开发环境IDLE介绍"></a>Python基本开发环境IDLE介绍</h2><h2 id="Python程序编写与运行"><a href="#Python程序编写与运行" class="headerlink" title="Python程序编写与运行"></a>Python程序编写与运行</h2><h2 id="Python高级开发环境VSCode"><a href="#Python高级开发环境VSCode" class="headerlink" title="Python高级开发环境VSCode"></a>Python高级开发环境VSCode</h2>]]></content>
     
     
     <categories>
