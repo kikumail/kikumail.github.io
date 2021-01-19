@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      631 字
+      673 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      9
        分钟
     </span>
   
@@ -260,10 +260,9 @@
 <img src="/images/image-20210119211257130.png" srcset="/img/loading.gif" alt="image-20210119211257130" style="zoom:87%;" />
 
 <ul>
-<li><p>安装成功后在访达-应用程序下会创建Python 3.9文件夹，里面包含了IDLE开发环境以及帮助文档</p>
+<li><p>安装成功后在访达-应用程序下会创建Python 3.9文件夹，里面包含了IDLE开发环境以及帮助文档  </p>
 <img src="/images/image-20210119212700271.png" srcset="/img/loading.gif" alt="image-20210119212700271" style="zoom:90%;" />
-
-<ul>
+</li>
 <li><p>设置PATH变量,我用的是zsh,使用vim打开.zshrc文件</p>
 <p><code>vim ~/.zshrc</code></p>
 <p>增加如下文本：</p>
@@ -277,17 +276,21 @@
 </blockquote>
 </li>
 </ul>
-</li>
-</ul>
 <h2 id="Python程序编写与运行"><a href="#Python程序编写与运行" class="headerlink" title="Python程序编写与运行"></a>Python程序编写与运行</h2><p>​    Python有二种编程方式</p>
 <ul>
-<li><strong>交互式</strong>    对每个输入语句即时运行出结果，适合语法练习使用，打开shell，输入python，如下代码所示：</li>
+<li><strong>交互式</strong>    对每个输入语句即时运行出结果，适合语法练习使用。打开shell，输入python或者打开IDLE。</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python">kikumail <span class="hljs-keyword">in</span> ~/blog on master ● ● λ python<br>Python <span class="hljs-number">3.9</span><span class="hljs-number">.1</span> (v3<span class="hljs-number">.9</span><span class="hljs-number">.1</span>:1e5d33e9b9, Dec  <span class="hljs-number">7</span> <span class="hljs-number">2020</span>, <span class="hljs-number">12</span>:<span class="hljs-number">44</span>:01)<br>[Clang <span class="hljs-number">12.0</span><span class="hljs-number">.0</span> (clang-<span class="hljs-number">1200.0</span><span class="hljs-number">.32</span><span class="hljs-number">.27</span>)] on darwin<br>Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string">&quot;copyright&quot;</span>, <span class="hljs-string">&quot;credits&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;license&quot;</span> <span class="hljs-keyword">for</span> more information.<br><span class="hljs-meta">&gt;&gt;&gt; </span>r = <span class="hljs-number">30</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>circleArea = <span class="hljs-number">3.14</span> * r * r<br><span class="hljs-meta">&gt;&gt;&gt; </span>print(circleArea)<br><span class="hljs-number">2826.0</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">&quot;&#123;:.2f&#125;&quot;</span>.<span class="hljs-built_in">format</span>(circleArea))<br><span class="hljs-number">2826.00</span><br>&gt;&gt;&gt;<br></code></pre></td></tr></table></figure>
+<center>实例1 求圆面积</center>
+
 <ul>
-<li><strong>文件式</strong>：批量执行一组语句并运行出结果，Python的主要编方式</li>
+<li><p><strong>文件式</strong>：批量执行一组语句并运行出结果，Python的主要编方式。打开IDLE，新建CircleArea.py文件。</p>
+<p><img src="/images/image-20210119222012994.png" srcset="/img/loading.gif" alt="image-20210119222012994"></p>
+<p>打开shell，输入python CircleArea.py运行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">kikumail <span class="hljs-keyword">in</span> ~/Documents/python on master ● λ python CircleArea.py<br><span class="hljs-number">2826.0</span><br><span class="hljs-number">2826.00</span><br>kikumail <span class="hljs-keyword">in</span> ~/Documents/python on master ● λ<br></code></pre></td></tr></table></figure>
+<h2 id="Python高级开发环境VSCode"><a href="#Python高级开发环境VSCode" class="headerlink" title="Python高级开发环境VSCode"></a>Python高级开发环境VSCode</h2></li>
 </ul>
-<h2 id="Python高级开发环境VSCode"><a href="#Python高级开发环境VSCode" class="headerlink" title="Python高级开发环境VSCode"></a>Python高级开发环境VSCode</h2>
+
             </div>
             <hr>
             <div>
