@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      953 字
+      1.1k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      12
        分钟
     </span>
   
@@ -397,12 +397,21 @@
 <p><code> TString[-1]</code>    返回字符串变量TString中最后一个字符   </p>
 </li>
 <li><p>切片：返回字符串中一段子字符串。格式：&lt;字符串&gt;[M: N ]</p>
-<p><code>&quot;请按输入要求输入温度值：&quot;[2:4]</code>      返回“输入”二</p>
+<p><code>&quot;请按输入要求输入温度值：&quot;[2:4]</code>      返回“输入”二个字符</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">TString = <span class="hljs-string">&quot;F221&quot;</span><br>TString[<span class="hljs-number">1</span>:]<br></code></pre></td></tr></table></figure>
-
 <p>返回字符串”221”，表示从第2个字符开始切，直到字符串末尾。</p>
 </li>
 </ol>
+</li>
+</ul>
+</li>
+<li><p>列表类型：由0个或多个数据组成的有序序列</p>
+<ul>
+<li><p>列表使用[ ]表示，采用逗号(,)分隔各元素</p>
+<p>[‘F’,’f’]表示两个元素’F’和’f’</p>
+</li>
+<li><p>列表的访问一般使用保留字 in 来判断一个元素是否在列表中</p>
+<p><code>TString[0] in [&#39;F&#39;,&#39;f&#39;]</code>    用于判断从TString中索引的字符是否与列表中的元素相同</p>
 </li>
 </ul>
 </li>
