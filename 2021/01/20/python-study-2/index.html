@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      788 字
+      953 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      11
        分钟
     </span>
   
@@ -388,6 +388,21 @@
 </tbody></table>
 <pre><code>    ----------------------------------------&gt;
                       正向递增序号</code></pre>
+</li>
+<li><p>字符串的使用</p>
+<p>可以使用[ ]来获取字符串中一个或多个字符。主要包括“索引”和“切片”两种操作。</p>
+<ol>
+<li><p>索引：返回字符串中单个字符。格式： &lt;字符串&gt;[M]</p>
+<p><code>&quot;请按输入要求输入温度值：&quot;[0]</code>      返回“请”字</p>
+<p><code> TString[-1]</code>    返回字符串变量TString中最后一个字符   </p>
+</li>
+<li><p>切片：返回字符串中一段子字符串。格式：&lt;字符串&gt;[M: N ]</p>
+<p><code>&quot;请按输入要求输入温度值：&quot;[2:4]</code>      返回“输入”二</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">TString = <span class="hljs-string">&quot;F221&quot;</span><br>TString[<span class="hljs-number">1</span>:]<br></code></pre></td></tr></table></figure>
+
+<p>返回字符串”221”，表示从第2个字符开始切，直到字符串末尾。</p>
+</li>
+</ol>
 </li>
 </ul>
 </li>
