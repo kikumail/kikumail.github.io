@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      216 字
+      369 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      4
        分钟
     </span>
   
@@ -237,8 +237,14 @@
 <p>请想象绘图区有一只机器海龟，起始位置在 x-y 平面的 (0, 0) 点。先执行 <code>import turtle</code>，再执行 <code>turtle.forward(15)</code>，它将(在屏幕上)朝所面对的 x 轴正方向前进 15 像素，随着它的移动画出一条线段。再执行 <code>turtle.right(25)</code>，它将原地右转 25 度。</p>
 <p>通过组合使用此类命令，可以轻松地绘制出精美的形状和图案。</p>
 </blockquote>
-<p><img src="/images/turtle-star.png" srcset="/img/loading.gif" alt="../_images/turtle-star.png"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *<br>color(<span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;yellow&#x27;</span>)<br>begin_fill()<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    forward(<span class="hljs-number">200</span>)<br>    left(<span class="hljs-number">170</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">abs</span>(pos()) &lt; <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">break</span><br>end_fill()<br>done()<br></code></pre></td></tr></table></figure>
+<h2 id="turtle-库概述"><a href="#turtle-库概述" class="headerlink" title="turtle 库概述"></a>turtle 库概述</h2><ul>
+<li>turtle绘图库是Python语言的标准库之一，随解释器直接安装到操作系统中，属于入门级的图形绘制函数库</li>
+<li>绘图思想：想像一只海龟，初始在窗体正中心，可以控制它在画布上爬行，走过的轨迹就形成了绘制的图形。编程人员可以通过语句控制海龟改变方向、颜色、宽度等。</li>
+<li>使用前需要通过import 导入 <code>import turtle</code></li>
+</ul>
+<h2 id="turtle的绘图窗体"><a href="#turtle的绘图窗体" class="headerlink" title="turtle的绘图窗体"></a>turtle的绘图窗体</h2><p>首次通过调用turtle绘图库的方法进行绘图时，会默认打开一个绘图窗体。也可以通过<code>turtle.setup()</code>    进行设置窗体属性。</p>
+<p><code>turtle.setup(width,height,startx,starty)</code></p>
+<p><img src="/images/image-20210121121417428.png" srcset="/img/loading.gif" alt="image-20210121121417428"></p>
 
             </div>
             <hr>
