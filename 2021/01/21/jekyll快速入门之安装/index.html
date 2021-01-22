@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      379 字
+      299 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      4
        分钟
     </span>
   
@@ -228,45 +228,58 @@
             <h1 style="display: none">jekyll快速入门之安装</h1>
             
             <div class="markdown-body">
-              <h1 id="Jekyll介绍"><a href="#Jekyll介绍" class="headerlink" title="Jekyll介绍"></a>Jekyll介绍</h1><p>一种快速生成静态博客网站的框架。</p>
-<h2 id="Mac环境下Jekyll安装"><a href="#Mac环境下Jekyll安装" class="headerlink" title="Mac环境下Jekyll安装"></a>Mac环境下Jekyll安装</h2><h3 id="安装ruby"><a href="#安装ruby" class="headerlink" title="安装ruby"></a>安装ruby</h3><ul>
+              <h1 id="Jekyll介绍"><a href="#Jekyll介绍" class="headerlink" title="Jekyll介绍"></a>Jekyll介绍</h1><p>一种快速生成静态博客网站的应用框架。</p>
+<h2 id="mac-环境下Jekyll安装"><a href="#mac-环境下Jekyll安装" class="headerlink" title="mac 环境下Jekyll安装"></a>mac 环境下Jekyll安装</h2><p>​    我的mac版本为macOS big sur 11.1，建议利用rbenv统一管理ruby版本。</p>
+<h3 id="安装rbenv"><a href="#安装rbenv" class="headerlink" title="安装rbenv"></a>安装rbenv</h3><ul>
 <li><p>执行：</p>
-<p><code>kikumail:~/ $ brew install ruby</code></p>
-<p>若提示：</p>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh">Error: The following directories are not writable by your user:<br>/usr/<span class="hljs-built_in">local</span>/share/zsh<br>/usr/<span class="hljs-built_in">local</span>/share/zsh/site-functions<br>You should change the ownership of these directories to your user.<br>  sudo chown -R $(whoami) /usr/<span class="hljs-built_in">local</span>/share/zsh /usr/<span class="hljs-built_in">local</span>/share/zsh/site-functions<br>And make sure that your user has write permission.<br>  chmod u+w /usr/<span class="hljs-built_in">local</span>/share/zsh /usr/<span class="hljs-built_in">local</span>/share/zsh/site-functions<br></code></pre></td></tr></table></figure></li>
-<li><p>执行：</p>
-<p><code>kikumail:~/ $ sudo chown -R $(whoami) /usr/local/share/zsh /usr/local/share/zsh/site-functions</code></p>
-<p><code>kikumail:~/ $  chmod u+w /usr/local/share/zsh /usr/local/share/zsh/site-functions</code>    即可。</p>
+<p><code>kikumail:~/ $ brew install rbenv ruby-build</code></p>
 </li>
 <li><p>配置<code>.zshrc</code>并重启shell</p>
-<p><code>echo &#39;export PATH=&quot;/usr/local/opt/ruby/bin:$PATH&quot;&#39; &gt;&gt; ~/.zshrc</code></p>
+<p><code>kikumail:~/ $ echo &#39;if which rbenv &gt; /dev/null; then eval &quot;$(rbenv init -)&quot;; fi&#39; &gt;&gt; ~/.zshrc</code></p>
+<p><code>kikumail:~/ $ source ./zshrc</code></p>
+</li>
+</ul>
+<h3 id="安装ruby"><a href="#安装ruby" class="headerlink" title="安装ruby"></a>安装ruby</h3><ul>
+<li><p>执行：</p>
+<p><code> kikumail:~/ $ rbenv install 3.0.0</code></p>
+<p>  <code>kikumail:~/ $ rbenv global 3.0.0</code></p>
+</li>
+<li><p>重启shell</p>
 <p><code>kikumail:~/ $ source ./zshrc</code></p>
 </li>
 <li><p>查看ruby版本</p>
-<p><code>kikumail:~/ $ </code>ruby -v`</p>
+<p><code>kikumail:~/ $ ruby -v</code></p>
 <blockquote>
 <p>kikumail:~/ $ ruby -v                                                        [21:08:26]<br>ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin20]</p>
 </blockquote>
 </li>
 </ul>
 <h3 id="安装Jekyll-这里强烈不建议以sudo权限安装，会出现目录权限问题而不能执行jekyll命令"><a href="#安装Jekyll-这里强烈不建议以sudo权限安装，会出现目录权限问题而不能执行jekyll命令" class="headerlink" title="安装Jekyll(这里强烈不建议以sudo权限安装，会出现目录权限问题而不能执行jekyll命令)"></a>安装Jekyll(这里强烈不建议以sudo权限安装，会出现目录权限问题而不能执行jekyll命令)</h3><ul>
-<li><p>执行：</p>
-<p><code>kikumail:~/ $ gem install --user-install bundler jekyll</code></p>
+<li><p>执行安装：</p>
+<p><code>kikumail:~/ $ gem install bundler jekyll</code></p>
 </li>
-<li><p>查看当前用户gem安装目录：</p>
-<p><code>kikumail:~/ $ gem env</code>  </p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs shell">RubyGems Environment:<br>  - RUBYGEMS VERSION: 3.2.3<br>  - RUBY VERSION: 3.0.0 (2020-12-25 patchlevel 0) [x86_64-darwin20]<br>  - INSTALLATION DIRECTORY: /usr/local/lib/ruby/gems/3.0.0<br>  - USER INSTALLATION DIRECTORY: /Users/kikumail/.local/share/gem/ruby/3.0.0<br>  - RUBY EXECUTABLE: /usr/local/opt/ruby/bin/ruby<br>  - GIT EXECUTABLE: /usr/bin/git<br>  - EXECUTABLE DIRECTORY: /usr/local/lib/ruby/gems/3.0.0/bin<br>  - SPEC CACHE DIRECTORY: /Users/kikumail/.local/share/gem/specs<br>  - SYSTEM CONFIGURATION DIRECTORY: /usr/local/Cellar/ruby/3.0.0_1/etc<br></code></pre></td></tr></table></figure>
-
-<p>  可见用户gem安装目录为：<code>/Users/kikumail/.local/share/gem/ruby/3.0.0</code></p>
+<li><p>新建名为myblog博客站点</p>
+<p><code> kikumail:~/ $ jekyll new myblog</code></p>
 </li>
-<li><p>配置.zshrc并重启shell</p>
-<p><code>kikumail:~/ $ echo &#39;export PATH=&quot;$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH&quot;&#39; &gt;&gt; ~/.zshrc.</code></p>
-<p><code>kikumail:~/ $ source ./zshrc</code></p>
+<li><p>启动本地服务器</p>
+<p><code> kikumail:~/ $ cd myblog</code></p>
+<p><code>kikumail:~/ $ bundle exec jekyll serve</code></p>
+<p>如果出现：</p>
+<blockquote>
+<p>bundler: failed to load command: jekyll (/Users/kikumail/myblog/vendor/bundle/ruby/3.0.0/bin/jekyll)</p>
+<p>/Users/kikumail/myblog/vendor/bundle/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require’: cannot load such file – webrick (LoadError)</p>
+</blockquote>
+<p>说明缺少webrick依赖</p>
+<p>执行：  </p>
+<p><code> kikumail:~/ $ bundle add webrick</code></p>
+<p>安装后，重新启动即可。</p>
+</li>
+<li><p>访问</p>
+<p>浏览器输入：<a target="_blank" rel="noopener" href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a></p>
+<p><img src="/images/image-20210122114631992.png" srcset="/img/loading.gif" alt="image-20210122114631992"></p>
 </li>
 </ul>
-<h3 id="创建站点"><a href="#创建站点" class="headerlink" title="创建站点"></a>创建站点</h3><ul>
-<li>执行</li>
-</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://jekyllrb.com/docs/installation/macos/">https://jekyllrb.com/docs/installation/macos/</a></p>
 
             </div>
             <hr>
