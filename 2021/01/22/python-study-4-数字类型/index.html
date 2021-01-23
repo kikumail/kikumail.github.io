@@ -17,7 +17,7 @@
   <meta name="description" content="彪哥的学习园地">
   <meta name="author" content="刘正标">
   <meta name="keywords" content="python,linux,java,macos,markdown">
-  <title>Python学习笔记-基本数据类型 - A.biao&#39;s blog</title>
+  <title>Python学习笔记-数字类型 - A.biao&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Python学习笔记-基本数据类型">
+            <span class="h2" id="subtitle" title="Python学习笔记-数字类型">
               
             </span>
 
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.9k 字
+      2.2k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      23
+      27
        分钟
     </span>
   
@@ -225,10 +225,10 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Python学习笔记-基本数据类型</h1>
+            <h1 style="display: none">Python学习笔记-数字类型</h1>
             
             <div class="markdown-body">
-              <h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="数字类型-Numbers"><a href="#数字类型-Numbers" class="headerlink" title="数字类型(Numbers)"></a>数字类型(Numbers)</h2><h3 id="整数类型-int"><a href="#整数类型-int" class="headerlink" title="整数类型 (int)"></a>整数类型 (int)</h3><p>​    整数类型和数学中的整数概念基本一致，可以取正数和负数，且取值无长度限制。根据进制表示形式分为以下四种。</p>
+              <h2 id="数字类型-Numbers"><a href="#数字类型-Numbers" class="headerlink" title="数字类型(Numbers)"></a>数字类型(Numbers)</h2><h3 id="整数类型-int"><a href="#整数类型-int" class="headerlink" title="整数类型 (int)"></a>整数类型 (int)</h3><p>​    整数类型和数学中的整数概念基本一致，可以取正数和负数，且取值无长度限制。根据进制表示形式分为以下四种。</p>
 <ul>
 <li>十进制：9527、1389998989、-1314</li>
 <li>二进制（以0b或者0B开头）：0b00101010、-0B100</li>
@@ -476,7 +476,54 @@
 <td align="left">c //= a 等效于 c = c // a</td>
 </tr>
 </tbody></table>
-<h3 id="数值运算函数"><a href="#数值运算函数" class="headerlink" title="数值运算函数"></a>数值运算函数</h3><h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2><h1 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%8D%E6%95%B0/254365">https://baike.baidu.com/item/%E5%A4%8D%E6%95%B0/254365</a>
+<p>注：数字类型间可进行混合运算，生成结果为“最宽”类型 ，整数-&gt;浮点数-&gt;复数</p>
+<p>​    例如：<code> 256 + 4.0 =260.0</code>    （整数 + 浮点数 = 浮点数）</p>
+<h3 id="常用数值运算函数"><a href="#常用数值运算函数" class="headerlink" title="常用数值运算函数"></a>常用数值运算函数</h3><p>Python标准库提供了一些常用的数值运算函数，列表如下：</p>
+<table>
+<thead>
+<tr>
+<th><strong>函数及使用</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>abs(x)</td>
+<td>绝对值，x的绝对值<br/>abs(-10.01) 结果为 10.01</td>
+</tr>
+<tr>
+<td>divmod(x,y)</td>
+<td>商余，(x/ / y, x%y)，同时输出商和余数<br/>divmod(10, 3) 结果为 (3, 1)</td>
+</tr>
+<tr>
+<td>pow(x, y[, z])</td>
+<td>幂余，(x**y)%z，[..]表示参数z可省略<br/>pow(3, pow(3, 99), 10000) 结果为 4587</td>
+</tr>
+<tr>
+<td>round(x[, d])</td>
+<td>四舍五入，d是保留小数位数，默认值为0<br/>round(-10.123, 2) 结果为 -10.12</td>
+</tr>
+<tr>
+<td>max(x1,x2,…,xn)</td>
+<td>最大值，返回x1,x2, … ,xn中的最大值，n不限<br/>max(1, 9, 5, 4, 3) 结果为 9</td>
+</tr>
+<tr>
+<td>min(x1,x2,…,xn)</td>
+<td>最小值，返回x1,x2, … ,xn中的最小值，n不限<br/>min(1, 9, 5, 4, 3) 结果为 1</td>
+</tr>
+<tr>
+<td>int(x)</td>
+<td>将x变成整数，舍弃小数部分<br />int(123.45) 结果为123； int(“123”) 结果为123</td>
+</tr>
+<tr>
+<td>float (x)</td>
+<td>将x变成浮点数，增加小数部分<br />float (12) 结果为12.0； float (“1.23”) 结果为1.23</td>
+</tr>
+<tr>
+<td>complex(x)</td>
+<td>将x变成复数，增加虚数部分<br />complex(4) 结果为 4 + 0j</td>
+</tr>
+</tbody></table>
+<h2 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%8D%E6%95%B0/254365">https://baike.baidu.com/item/%E5%A4%8D%E6%95%B0/254365</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
