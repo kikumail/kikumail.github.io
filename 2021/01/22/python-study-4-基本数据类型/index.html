@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      832 字
+      1k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      11
        分钟
     </span>
   
@@ -270,7 +270,8 @@
 <li><p>短路运算</p>
 <p>布尔类型还可以与其它数据类型（这些数据类型代表的真假参考以上真值测试说明）进行逻辑运算。当参与运算的是其它数据类型，则返回的是其它数据类型本身的值 ，而不是其代表的真或假。</p>
 <ul>
-<li><p>计算 <code>a and b</code>时，若a为True，则计算结果取决于b，返回的是b本身的值；若a为False，则直接返回a本身的值。</p>
+<li>计算 <code>a and b</code>时，若a为True，则计算结果取决于b，返回的是b本身的值；若a为False，则直接返回a本身的值。</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -287,7 +288,7 @@
 <td align="center"><img src="/images/image-20210123144200460.png" srcset="/img/loading.gif" alt="返回a本身值，空字符串“”"></td>
 </tr>
 </tbody></table>
-</li>
+<ul>
 <li><p>计算<code>a or b</code> 时，若a为True，则返回a的值；相反，返回b的值</p>
 <table>
 <thead>
@@ -307,6 +308,60 @@
 </tbody></table>
 </li>
 </ul>
+</li>
+<li><p>三目运算</p>
+<p>Python中利用if else条件语句实现了三目运算。</p>
+<p>格式 ：<code>表达式1  if  条件表达式  else  表达式2</code>    </p>
+</li>
+</ul>
+<p>​            如果条件表达式成立返回表达式1的结果，否则返回表达式2的结果</p>
+<p>​        示例：</p>
+<p><img src="/images/image-20210123153517295.png" srcset="/img/loading.gif" alt="如果a大于b打印a，否则打印b"></p>
+<ul>
+<li><p>比较运算</p>
+<p>通过比较操作会返回布尔类型的值。除了普通的比较操作外，Python还支持is操作来判断两个对象是否是同一个对象，下面是Python支持的所有的比较操作：</p>
+<table>
+<thead>
+<tr>
+<th align="left">操作符</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;</td>
+<td align="left">小于</td>
+</tr>
+<tr>
+<td align="left">&lt;=</td>
+<td align="left">小于等于</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于</td>
+</tr>
+<tr>
+<td align="left">&gt;=</td>
+<td align="left">大于等于</td>
+</tr>
+<tr>
+<td align="left">==</td>
+<td align="left">等于</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="left">不等于</td>
+</tr>
+<tr>
+<td align="left">is</td>
+<td align="left">是相同对象</td>
+</tr>
+<tr>
+<td align="left">is not</td>
+<td align="left">是不同对象</td>
+</tr>
+</tbody></table>
+<p>示例：</p>
+<p><img src="/images/image-20210123153939669.png" srcset="/img/loading.gif" alt="一些比较运算示例"></p>
 </li>
 </ul>
 <h3 id="复数类型-complex"><a href="#复数类型-complex" class="headerlink" title="复数类型(complex)"></a>复数类型(complex)</h3><h3 id="数值运算操作符"><a href="#数值运算操作符" class="headerlink" title="数值运算操作符"></a>数值运算操作符</h3><h3 id="数值运算函数"><a href="#数值运算函数" class="headerlink" title="数值运算函数"></a>数值运算函数</h3><h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2>
