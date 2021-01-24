@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      689 字
+      990 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      11
        分钟
     </span>
   
@@ -314,7 +314,7 @@
 <tr>
 <th align="left">操作符</th>
 <th>使用方法</th>
-<th align="left">描述</th>
+<th align="left">功能</th>
 <th align="left">实例</th>
 </tr>
 </thead>
@@ -337,7 +337,57 @@
 <td align="left">“He” in “Hello” 输出结果True</td>
 </tr>
 </tbody></table>
-<h2 id="处理字符串的内置函数"><a href="#处理字符串的内置函数" class="headerlink" title="处理字符串的内置函数"></a>处理字符串的内置函数</h2><h2 id="字符串处理方法"><a href="#字符串处理方法" class="headerlink" title="字符串处理方法"></a>字符串处理方法</h2>
+<blockquote>
+<p>实例：编写一个程序，根据用户输入的数字（1-7），打印对应的星期字符串。如：输入4，打印“星期四”。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#PrintWeekName.py</span><br>Str = <span class="hljs-string">&quot;一二三四五六日&quot;</span><br>Id = <span class="hljs-built_in">eval</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入星期数字(1-7):&quot;</span>)) <br>print(<span class="hljs-string">&quot;星期&quot;</span> + weekStr[weekId-<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
+
+<h2 id="处理字符串的内置函数"><a href="#处理字符串的内置函数" class="headerlink" title="处理字符串的内置函数"></a>处理字符串的内置函数</h2><p>​        在Python标准库中，集成了一些可以用来处理字符串内置函数。这些函数可以直接使用，或需要传入字符串，或返回值为字符串。</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>len(s)</td>
+<td>返回字符串s的长度</td>
+<td>len(“hello python”)   结果为：12</td>
+</tr>
+<tr>
+<td>str(any)</td>
+<td>将任意类型any，以字符串形式表示</td>
+<td>str(3.14)  结果为”3.14”，str([3,8])  结果为”[3,8]”</td>
+</tr>
+<tr>
+<td>hex(n)</td>
+<td>得到整数n的16进制数，并以小写的字符串形式返回</td>
+<td>hex(256)  结果为’0x100’</td>
+</tr>
+<tr>
+<td>oct(n)</td>
+<td>得到整数n的8进制数，并以小写的字符串形式返回</td>
+<td>oct(256)  结果为’0o400’</td>
+</tr>
+<tr>
+<td>bin(n)</td>
+<td>得到整数n的2进制数，并以小写的字符串形式返回</td>
+<td>bin(256)  结果为’0b100000000’</td>
+</tr>
+<tr>
+<td>chr(u)</td>
+<td>返回Unicode编码对应的Unicode字符</td>
+<td>chr(10004)  结果为 &#10004;</td>
+</tr>
+<tr>
+<td>ord(c)</td>
+<td>返回Unicode字符对应的Unicode编码</td>
+<td>ord(a)  结果为97</td>
+</tr>
+</tbody></table>
+<h2 id="字符串处理方法"><a href="#字符串处理方法" class="headerlink" title="字符串处理方法"></a>字符串处理方法</h2>
             </div>
             <hr>
             <div>
@@ -354,9 +404,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/python/">python</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
                     
                   </div>
                 
