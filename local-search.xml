@@ -8,7 +8,7 @@
     <link href="/2021/01/23/python-study-5-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B/"/>
     <url>/2021/01/23/python-study-5-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B/</url>
     
-    <content type="html"><![CDATA[<h1 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h1><p>字符串：由0个或者多个字符组成的有序字符序列，在python中有多种表示方式。</p><h2 id="字符串表示与使用"><a href="#字符串表示与使用" class="headerlink" title="字符串表示与使用"></a>字符串表示与使用</h2><h3 id="字符串的表示"><a href="#字符串的表示" class="headerlink" title="字符串的表示"></a>字符串的表示</h3><ol><li>用一对单引号表示，如‘C’</li><li>用一对双引号表示，如”请输入正确的温度格式！”</li><li>用一对三个单引号或三个双引号表示，如：<blockquote><p>  ‘’’<br>  这是一个字符块 ，<br>  也可以当成多行注释来用。<br>  ‘’’</p></blockquote></li></ol><h3 id="字符串的序号"><a href="#字符串的序号" class="headerlink" title="字符串的序号"></a>字符串的序号</h3><p>字符串是字符的有序序列，可以通过序号对其中的字符进行索引。分为正向递增序号和反向递减序号。</p><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elm">                 反向递减序号<br>&lt;-<span class="hljs-comment">----------------------------------------</span><br></code></pre></td></tr></table></figure><table><thead><tr><th align="center">-12</th><th align="center">-11</th><th align="center">-10</th><th align="center">-9</th><th align="center">-8</th><th align="center">-7</th><th align="center">-6</th><th align="center">-5</th><th align="center">-4</th><th align="center">-3</th><th>-2</th><th align="center">-1</th></tr></thead><tbody><tr><td align="center">请</td><td align="center">按</td><td align="center">输</td><td align="center">入</td><td align="center">要</td><td align="center">求</td><td align="center">输</td><td align="center">入</td><td align="center">温</td><td align="center">度</td><td>值</td><td align="center">：</td></tr><tr><td align="center">0</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td>10</td><td align="center">11</td></tr></tbody></table><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada"><span class="hljs-comment">----------------------------------------&gt;</span><br>                  正向递增序号<br></code></pre></td></tr></table></figure><h3 id="字符串的使用"><a href="#字符串的使用" class="headerlink" title="字符串的使用"></a>字符串的使用</h3><p>可以使用[ ]来获取字符串中一个或多个字符。主要包括“<strong>索引</strong>”和“<strong>切片</strong>”两种操作。</p><ol><li><p><strong>索引</strong>：返回字符串中单个字符。格式：<code> &lt;字符串&gt;[index]</code>，其中index为索引编号</p><p><code>&quot;请按输入要求输入温度值：&quot;[0]</code>      返回“请”字</p><p><code> TString[-1]</code>    返回字符串变量TString中最后一个字符   </p></li><li><p><strong>切片</strong>：返回字符串中一段子字符串。 </p><ul><li><p>格式一：<code>&lt;字符串&gt;[start_index: stop_index ] </code></p><p>解释：返回&lt;字符串&gt;中索引从<code>start_index</code>至<code>stop_index-1</code>的子串。当省略start_index表示<code>从开头</code>，省略stop_index表示<code>至结尾</code></p><p>示例1： <code>&quot;请按输入要求输入温度值：&quot;[2:4]    #结果返回“输入”</code></p><p>示例2： “请按输入要求输入温度值：”<code>[:3] </code>       #结果返回“请按输”</p><p>示例3： “请按输入要求输入温度值：”<code>[8:] </code>       #结果返回“温度值：”</p></li><li><p>格式二：<code>&lt;字符串&gt;[start_index: stop_index :step] </code></p><p>解释：以<code>步长step返回&lt;字符串&gt;中索引从start_index</code>至<code>stop_index-1</code>的子串。当省略start_index表示<code>从开头</code>，省略stop_index表示<code>至结尾</code>，当step为负数时表示反向切片。  </p><p>示例1：”零一二三四五六七八九十”<code>[2:8:2]</code>    #结果返回“二四六”</p><p>示例2：”零一二三四五六七八九十”<code>[::-1] </code>       #结果返回“十九八七六五四三二一零”</p><p>示例2：”零一二三四五六七八九十”<code>[6:-8:-2] </code>    #结果返回“六四”</p></li></ul></li></ol><h3 id="字符串操作符"><a href="#字符串操作符" class="headerlink" title="字符串操作符"></a>字符串操作符</h3><table><thead><tr><th align="left">操作符</th><th>使用方法</th><th align="left">功能</th><th align="left">实例</th></tr></thead><tbody><tr><td align="left">+</td><td>x + y</td><td align="left">连接两个字符串x和y</td><td align="left">“Hello” + “Python” 输出结果”HelloPython”</td></tr><tr><td align="left">*</td><td>n * x 或 x * n</td><td align="left">复制n次字符串x</td><td align="left">“Ha”*3 输出结果”HaHaHa”</td></tr><tr><td align="left">In</td><td>x in s</td><td align="left">如果x是s的子串，返回True，否则返回False</td><td align="left">“He” in “Hello” 输出结果True</td></tr></tbody></table><blockquote><p>实例：编写一个程序，根据用户输入的数字（1-7），打印对应的星期字符串。如：输入4，打印“星期四”。</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#PrintWeekName.py</span><br>Str = <span class="hljs-string">&quot;一二三四五六日&quot;</span><br>Id = <span class="hljs-built_in">eval</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入星期数字(1-7):&quot;</span>)) <br>print(<span class="hljs-string">&quot;星期&quot;</span> + weekStr[weekId-<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure><h2 id="处理字符串的内置函数"><a href="#处理字符串的内置函数" class="headerlink" title="处理字符串的内置函数"></a>处理字符串的内置函数</h2><p>​        在Python标准库中，集成了一些可以用来处理字符串内置函数。这些函数可以直接使用，或需要传入字符串，或返回值为字符串。</p><table><thead><tr><th>函数</th><th>功能</th><th>实例</th></tr></thead><tbody><tr><td>len(s)</td><td>返回字符串s的长度</td><td>len(“hello python”)   结果为：12</td></tr><tr><td>str(any)</td><td>将任意类型any，以字符串形式表示</td><td>str(3.14)  结果为”3.14”，str([3,8])  结果为”[3,8]”</td></tr><tr><td>hex(n)</td><td>得到整数n的16进制数，并以小写的字符串形式返回</td><td>hex(256)  结果为’0x100’</td></tr><tr><td>oct(n)</td><td>得到整数n的8进制数，并以小写的字符串形式返回</td><td>oct(256)  结果为’0o400’</td></tr><tr><td>bin(n)</td><td>得到整数n的2进制数，并以小写的字符串形式返回</td><td>bin(256)  结果为’0b100000000’</td></tr><tr><td>chr(u)</td><td>返回Unicode编码对应的Unicode字符</td><td>chr(10005)  结果为 &#10005;</td></tr><tr><td>ord(c)</td><td>返回Unicode字符对应的Unicode编码</td><td>ord(a)  结果为97</td></tr></tbody></table><h2 id="字符串处理方法"><a href="#字符串处理方法" class="headerlink" title="字符串处理方法"></a>字符串处理方法</h2><p>​        在Python语言中，字符串本身提供了很多方法来处理字符串。这些方法以小数点（.）加上方法名的形式调用。特别注意：在Python语言中定义的字符串都是不可改变的，以下操作若返回字符串，都会生成新字符串。</p><table><thead><tr><th>函数</th><th>功能</th><th>实例</th></tr></thead><tbody><tr><td>str.lower()</td><td>返回字符串str的全部小写形式</td><td>“HeLLO”.lower() 结果为”hello”</td></tr><tr><td>str.upper()</td><td>返回字符串str的全部大写形式</td><td>“HeLLO”.upper() 结果为”HELLO”</td></tr><tr><td>str.split(sep=None)</td><td>返回一个列表，由str根据sep被分隔的部分组成</td><td>“I,love,Python”.split(‘,’)<br />结果为[‘I’, ‘love’, ‘Python’]</td></tr><tr><td>str.count(sub)</td><td>返回子串sub在str中出现的次数</td><td>“an apple a day”.count(‘a’)  结果为 4</td></tr><tr><td>str.replace(old, new)</td><td>返回字符串str的副本，所有的<br />old子串被替换为new</td><td>“Hello Java”.replace(“Java”,”Python”)<br />结果为’Hello Python’</td></tr><tr><td>str.center(width[,fillchar])</td><td>字符串str根据宽度width居中，<br />fillchar为可选填充字符，省略时用空格填充</td><td>“python”.center(15,’+’)  <br />结果为’+++++python++++’</td></tr><tr><td>str.strip(chars)</td><td>从str中去掉在其左侧和右侧chars中列出的字符</td><td>“+Bhello python A”.strip(“+BA “)<br />结果为’hello python’</td></tr><tr><td>str.join(iter)</td><td>在iter变量除最后元素外每个元素后增加一个str</td><td>“-“.join(“hello”) 结果为’h-e-l-l-o’</td></tr></tbody></table><h2 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h1><p>字符串：由0个或者多个字符组成的有序字符序列，在python中有多种表示方式。</p><h2 id="字符串表示与使用"><a href="#字符串表示与使用" class="headerlink" title="字符串表示与使用"></a>字符串表示与使用</h2><h3 id="字符串的表示"><a href="#字符串的表示" class="headerlink" title="字符串的表示"></a>字符串的表示</h3><ol><li>用一对单引号表示，如‘C’</li><li>用一对双引号表示，如”请输入正确的温度格式！”</li><li>用一对三个单引号或三个双引号表示，如：<blockquote><p>  ‘’’<br>  这是一个字符块 ，<br>  也可以当成多行注释来用。<br>  ‘’’</p></blockquote></li></ol><h3 id="字符串的序号"><a href="#字符串的序号" class="headerlink" title="字符串的序号"></a>字符串的序号</h3><p>字符串是字符的有序序列，可以通过序号对其中的字符进行索引。分为正向递增序号和反向递减序号。</p><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elm">                 反向递减序号<br>&lt;-<span class="hljs-comment">----------------------------------------</span><br></code></pre></td></tr></table></figure><table><thead><tr><th align="center">-12</th><th align="center">-11</th><th align="center">-10</th><th align="center">-9</th><th align="center">-8</th><th align="center">-7</th><th align="center">-6</th><th align="center">-5</th><th align="center">-4</th><th align="center">-3</th><th>-2</th><th align="center">-1</th></tr></thead><tbody><tr><td align="center">请</td><td align="center">按</td><td align="center">输</td><td align="center">入</td><td align="center">要</td><td align="center">求</td><td align="center">输</td><td align="center">入</td><td align="center">温</td><td align="center">度</td><td>值</td><td align="center">：</td></tr><tr><td align="center">0</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td>10</td><td align="center">11</td></tr></tbody></table><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada"><span class="hljs-comment">----------------------------------------&gt;</span><br>                  正向递增序号<br></code></pre></td></tr></table></figure><h3 id="字符串的使用"><a href="#字符串的使用" class="headerlink" title="字符串的使用"></a>字符串的使用</h3><p>可以使用[ ]来获取字符串中一个或多个字符。主要包括“<strong>索引</strong>”和“<strong>切片</strong>”两种操作。</p><ol><li><p><strong>索引</strong>：返回字符串中单个字符。格式：<code> &lt;字符串&gt;[index]</code>，其中index为索引编号</p><p><code>&quot;请按输入要求输入温度值：&quot;[0]</code>      返回“请”字</p><p><code> TString[-1]</code>    返回字符串变量TString中最后一个字符   </p></li><li><p><strong>切片</strong>：返回字符串中一段子字符串。 </p><ul><li><p>格式一：<code>&lt;字符串&gt;[start_index: stop_index ] </code></p><p>解释：返回&lt;字符串&gt;中索引从<code>start_index</code>至<code>stop_index-1</code>的子串。当省略start_index表示<code>从开头</code>，省略stop_index表示<code>至结尾</code></p><p>示例1： “请按输入要求输入温度值：”<code>[2:4]</code>    #结果返回“输入”</p><p>示例2： “请按输入要求输入温度值：”<code>[:3] </code>       #结果返回“请按输”</p><p>示例3： “请按输入要求输入温度值：”<code>[8:] </code>       #结果返回“温度值：”</p></li><li><p>格式二：<code>&lt;字符串&gt;[start_index: stop_index :step] </code></p><p>解释：以<code>步长step返回&lt;字符串&gt;中索引从start_index</code>至<code>stop_index-1</code>的子串。当省略start_index表示<code>从开头</code>，省略stop_index表示<code>至结尾</code>，当step为负数时表示反向切片。  </p><p>示例1：”零一二三四五六七八九十”<code>[2:8:2]</code>    #结果返回“二四六”</p><p>示例2：”零一二三四五六七八九十”<code>[::-1] </code>       #结果返回“十九八七六五四三二一零”</p><p>示例2：”零一二三四五六七八九十”<code>[6:-8:-2] </code>    #结果返回“六四”</p></li></ul></li></ol><h3 id="字符串操作符"><a href="#字符串操作符" class="headerlink" title="字符串操作符"></a>字符串操作符</h3><table><thead><tr><th align="left">操作符</th><th>使用方法</th><th align="left">功能</th><th align="left">实例</th></tr></thead><tbody><tr><td align="left">+</td><td>x + y</td><td align="left">连接两个字符串x和y</td><td align="left">“Hello” + “Python” 输出结果”HelloPython”</td></tr><tr><td align="left">*</td><td>n * x 或 x * n</td><td align="left">复制n次字符串x</td><td align="left">“Ha”*3 输出结果”HaHaHa”</td></tr><tr><td align="left">In</td><td>x in s</td><td align="left">如果x是s的子串，返回True，否则返回False</td><td align="left">“He” in “Hello” 输出结果True</td></tr></tbody></table><blockquote><p>实例：编写一个程序，根据用户输入的数字（1-7），打印对应的星期字符串。如：输入4，打印“星期四”。</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#PrintWeekName.py</span><br>Str = <span class="hljs-string">&quot;一二三四五六日&quot;</span><br>Id = <span class="hljs-built_in">eval</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入星期数字(1-7):&quot;</span>)) <br>print(<span class="hljs-string">&quot;星期&quot;</span> + weekStr[weekId-<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure><h2 id="处理字符串的内置函数"><a href="#处理字符串的内置函数" class="headerlink" title="处理字符串的内置函数"></a>处理字符串的内置函数</h2><p>​        在Python标准库中，集成了一些可以用来处理字符串内置函数。这些函数可以直接使用，或需要传入字符串，或返回值为字符串。</p><table><thead><tr><th>函数</th><th>功能</th><th>实例</th></tr></thead><tbody><tr><td>len(s)</td><td>返回字符串s的长度</td><td>len(“hello python”)   结果为：12</td></tr><tr><td>str(any)</td><td>将任意类型any，以字符串形式表示</td><td>str(3.14)  结果为”3.14”，str([3,8])  结果为”[3,8]”</td></tr><tr><td>hex(n)</td><td>得到整数n的16进制数，并以小写的字符串形式返回</td><td>hex(256)  结果为’0x100’</td></tr><tr><td>oct(n)</td><td>得到整数n的8进制数，并以小写的字符串形式返回</td><td>oct(256)  结果为’0o400’</td></tr><tr><td>bin(n)</td><td>得到整数n的2进制数，并以小写的字符串形式返回</td><td>bin(256)  结果为’0b100000000’</td></tr><tr><td>chr(u)</td><td>返回Unicode编码对应的Unicode字符</td><td>chr(10005)  结果为 &#10005;</td></tr><tr><td>ord(c)</td><td>返回Unicode字符对应的Unicode编码</td><td>ord(a)  结果为97</td></tr></tbody></table><h2 id="字符串处理方法"><a href="#字符串处理方法" class="headerlink" title="字符串处理方法"></a>字符串处理方法</h2><p>​        在Python语言中，字符串本身提供了很多方法来处理字符串。这些方法以小数点（.）加上方法名的形式调用。特别注意：在Python语言中定义的字符串都是不可改变的，以下操作若返回字符串，都会生成新字符串。</p><table><thead><tr><th>函数</th><th>功能</th><th>实例</th></tr></thead><tbody><tr><td>str.lower()</td><td>返回字符串str的全部小写形式</td><td>“HeLLO”.lower() 结果为”hello”</td></tr><tr><td>str.upper()</td><td>返回字符串str的全部大写形式</td><td>“HeLLO”.upper() 结果为”HELLO”</td></tr><tr><td>str.split(sep=None)</td><td>返回一个列表，由str根据sep被分隔的部分组成</td><td>“I,love,Python”.split(‘,’)<br />结果为[‘I’, ‘love’, ‘Python’]</td></tr><tr><td>str.count(sub)</td><td>返回子串sub在str中出现的次数</td><td>“an apple a day”.count(‘a’)  结果为 4</td></tr><tr><td>str.replace(old, new)</td><td>返回字符串str的副本，所有的<br />old子串被替换为new</td><td>“Hello Java”.replace(“Java”,”Python”)<br />结果为’Hello Python’</td></tr><tr><td>str.center(width[,fillchar])</td><td>字符串str根据宽度width居中，<br />fillchar为可选填充字符，省略时用空格填充</td><td>“python”.center(15,’+’)  <br />结果为’+++++python++++’</td></tr><tr><td>str.strip(chars)</td><td>从str中去掉在其左侧和右侧chars中列出的字符</td><td>“+Bhello python A”.strip(“+BA “)<br />结果为’hello python’</td></tr><tr><td>str.join(iter)</td><td>在iter变量除最后元素外每个元素后增加一个str</td><td>“-“.join(“hello”) 结果为’h-e-l-l-o’</td></tr></tbody></table><h2 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h2>]]></content>
     
     
     <categories>
@@ -20,9 +20,9 @@
     
     <tags>
       
-      <tag>python</tag>
-      
       <tag>程序设计</tag>
+      
+      <tag>python</tag>
       
     </tags>
     
@@ -47,9 +47,9 @@
     
     <tags>
       
-      <tag>python</tag>
-      
       <tag>程序设计</tag>
+      
+      <tag>python</tag>
       
     </tags>
     
@@ -101,9 +101,9 @@
     
     <tags>
       
-      <tag>python</tag>
-      
       <tag>程序设计</tag>
+      
+      <tag>python</tag>
       
     </tags>
     
@@ -128,9 +128,9 @@
     
     <tags>
       
-      <tag>程序设计</tag>
-      
       <tag>markdown</tag>
+      
+      <tag>程序设计</tag>
       
     </tags>
     
@@ -155,9 +155,9 @@
     
     <tags>
       
-      <tag>python</tag>
-      
       <tag>程序设计</tag>
+      
+      <tag>python</tag>
       
     </tags>
     
@@ -182,9 +182,9 @@
     
     <tags>
       
-      <tag>python</tag>
-      
       <tag>程序设计</tag>
+      
+      <tag>python</tag>
       
     </tags>
     
