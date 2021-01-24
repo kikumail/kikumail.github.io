@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k 字
+      1.4k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      16
        分钟
     </span>
   
@@ -322,88 +322,7 @@
 </li>
 <li><p>浮点数：数学中的实数，带有小数部分，没有单精度和双精度之分。如：3.14、-3.14、10.00</p>
 </li>
-<li><p>字符串：由0个或者多个字符组成的有序字符序列。</p>
-<ul>
-<li><p>表示方法</p>
-<ol>
-<li><p>用一对单引号表示，如‘C’</p>
-</li>
-<li><p>用一对双引号表示，如”请输入正确的温度格式！”</p>
-</li>
-<li><p>用一对三个单引号或三个双引号表示，如：</p>
-</li>
-</ol>
-<blockquote>
-<p>  ‘’’<br>   这是一个字符块 ，<br>   也可以当成多行注释来用。<br>   ‘’’</p>
-</blockquote>
-</li>
-<li><p>字符串的序号<br>字符串是字符的有序序列，可以通过序号对其中的字符进行索引。分为正向递增序号和反向递减序号。</p>
-<pre><code>                     反向递减序号
-    &lt;-----------------------------------------</code></pre>
-<table>
-<thead>
-<tr>
-<th align="center">-12</th>
-<th align="center">-11</th>
-<th align="center">-10</th>
-<th align="center">-9</th>
-<th align="center">-8</th>
-<th align="center">-7</th>
-<th align="center">-6</th>
-<th align="center">-5</th>
-<th align="center">-4</th>
-<th align="center">-3</th>
-<th>-2</th>
-<th align="center">-1</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">请</td>
-<td align="center">按</td>
-<td align="center">输</td>
-<td align="center">入</td>
-<td align="center">要</td>
-<td align="center">求</td>
-<td align="center">输</td>
-<td align="center">入</td>
-<td align="center">温</td>
-<td align="center">度</td>
-<td>值</td>
-<td align="center">：</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">2</td>
-<td align="center">3</td>
-<td align="center">4</td>
-<td align="center">5</td>
-<td align="center">6</td>
-<td align="center">7</td>
-<td align="center">8</td>
-<td align="center">9</td>
-<td>10</td>
-<td align="center">11</td>
-</tr>
-</tbody></table>
-<pre><code>    ----------------------------------------&gt;
-                      正向递增序号</code></pre>
-</li>
-<li><p>字符串的使用</p>
-<p>可以使用[ ]来获取字符串中一个或多个字符。主要包括“索引”和“切片”两种操作。</p>
-<ol>
-<li><p>索引：返回字符串中单个字符。格式： &lt;字符串&gt;[M]</p>
-<p><code>&quot;请按输入要求输入温度值：&quot;[0]</code>      返回“请”字</p>
-<p><code> TString[-1]</code>    返回字符串变量TString中最后一个字符   </p>
-</li>
-<li><p>切片：返回字符串中一段子字符串。格式：&lt;字符串&gt;[M: N ]</p>
-<p><code>&quot;请按输入要求输入温度值：&quot;[2:4]</code>      返回“输入”二个字符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">TString = <span class="hljs-string">&quot;F221&quot;</span><br>TString[<span class="hljs-number">1</span>:]<br></code></pre></td></tr></table></figure>
-<p>返回字符串”221”，表示从第2个字符开始切，直到字符串末尾。</p>
-</li>
-</ol>
-</li>
-</ul>
+<li><p>字符串：由0个或者多个字符组成的有序字符序列，在python中有多种表示方式。如：””,’’,”你好”，’hello python’,’’’ 我爱python ‘’’,””” 人生苦短，我学python “””</p>
 </li>
 <li><p>列表类型：由0个或多个数据组成的有序序列</p>
 <ul>
