@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.7k 字
+      3k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      30
+      35
        分钟
     </span>
   
@@ -459,27 +459,33 @@
 <p>其中：<code>&#123;&#125;</code> 称为槽。 format()中以逗号分隔的部分称为参数，用于填充到槽中。参数是有先后顺序的，索引从0开始。在槽中可以不按参数顺序进行填充，只要显式指明要填充的是哪个索引的参数即可。</p>
 </li>
 <li><p>格式控制信息</p>
-<p>在槽内除了可以指定参数序号还可以指定填充的格式，称为<code>格式控制标记</code>。</p>
+<p>在槽内除了可以指定参数序号还可以指定填充的格式，称为<code>格式控制标记</code> ，注意格式控制标记前是以”：”号开头的。</p>
 <blockquote>
 <p><strong>{&lt;参数序号&gt;: &lt;格式控制标记&gt;}</strong></p>
 </blockquote>
 <p>其中，&lt;格式控制标记&gt;用来控制参数显示时的格式，包括：**&lt;填充&gt;&lt;对齐&gt;&lt;宽度&gt;&lt;,&gt;&lt;.精度&gt;&lt;类型&gt;6 个字段**，这些字段都是可选的，可以组合使用.<br>  <img src="/images/20170910165845679.png" srcset="/img/loading.gif" alt="格式控制标记"></p>
-<p><code>&lt;填充&gt;</code>    当设定参数的输出&lt;宽度&gt;后，如果实际参数内容的长度少于设定的宽度后，以何种字符填充。默认采用空格。  </p>
+<p><code>&lt;填充&gt;</code>    当设定参数的输出&lt;宽度&gt;后，如果实际参数内容的长度少于设定的宽度后，以何种字符填充。默认采用空格。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Hello, &#123;:15&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;Python&#x27;</span>)  <span class="hljs-comment"># 设定宽度为15，默认用空格填充</span><br><span class="hljs-string">&#x27;Hello, Python         &#x27;</span><br></code></pre></td></tr></table></figure>
 <p><code>&lt;对齐&gt;</code>    参数的内容在槽内输出的对齐方式。</p>
-<p>&lt;宽度&gt;    指定当前槽的出字符宽度，如果该槽对应参数的内容长度比&lt;宽度&gt;设定值大，则使用参数内容的实际长度。如果该值的实际位数小于指定宽度，则其余位数以&lt;填充&gt;标记指定的字符填充。若没有指定则以空格字符填充。</p>
-<p><code>&lt;,&gt;</code>    逗号用来设定是否显示千位分隔符。</p>
-<p><code>&lt;.精度&gt;</code>    以小数字开始，后接精度取值位数。对于浮点数就是小数点后的保留位数，对于字符串就是字符输出长度。</p>
-<p><code>&lt;类别&gt;</code>    指定参数内容的输出格式。主要分为整型数和浮点数。</p>
-<p>整型数:</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Hello, &#123;:=&gt;15&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;Python&#x27;</span>) <span class="hljs-comment"># 设定宽度为15,使用&quot;=&quot;号填充，右对齐</span><br><span class="hljs-string">&#x27;Hello, =========Python&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>  &lt;宽度&gt;    指定当前槽的出字符宽度，如果该槽对应参数的内容长度比&lt;宽度&gt;设定值大，则使用参数内容的实际长度。如果该值的实际位数小于指定宽度，则其余位数以&lt;填充&gt;标记指定的字符填充。若没有指定则以空格字符填充。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Hello, &#123;:4&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;Python&#x27;</span>)   <span class="hljs-comment"># 设定宽度为4，由于字符串&#x27;Python&#x27;实际宽度是6，所以按实际宽度输出</span><br><span class="hljs-string">&#x27;Hello, Python&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>  <code>&lt;,&gt;</code>    逗号用来设定是否显示千位分隔符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;I have &#123;:,&#125; dollar&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-number">1000000000000</span>)<br><span class="hljs-string">&#x27;I have 1,000,000,000,000 dollar&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>   <code>&lt;.精度&gt;</code>    以小数点开始，后接精度取值位数。对于浮点数就是小数点后的保留位数，对于字符串就是字符输出长度。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&quot;圆周率保留3位小数是：&#123;:.3f&#125;&quot;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-number">3.14159265</span>)<br><span class="hljs-string">&#x27;圆周率保留3位小数是：3.142&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>  <code>&lt;类别&gt;</code>    指定参数内容的输出格式。主要分为整型数和浮点数。</p>
+<p>  整型数:</p>
 <blockquote>
 <p>b: 输出整数的二进制方式；<br>c: 输出整数对应的 Unicode 字符；<br>d: 输出整数的十进制方式；<br>o: 输出整数的八进制方式；<br>x: 输出整数的小写十六进制方式；<br>X: 输出整数的大写十六进制方式； </p>
 </blockquote>
-<p>浮点数:</p>
+<p>  浮点数:</p>
 <blockquote>
 <p>e: 输出浮点数对应的小写字母 e 的指数形式；<br>E: 输出浮点数对应的大写字母 E 的指数形式；<br>f: 输出浮点数的标准浮点形式；<br>%: 输出浮点数的百分形式。 </p>
 </blockquote>
-</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>x = <span class="hljs-number">284</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>&#123;<span class="hljs-string">&quot;x的2进制值是：&#123;:b&#125;&quot;</span>.<span class="hljs-built_in">format</span>(x)&#125;<br>&#123;<span class="hljs-string">&#x27;x的2进制值是：100011100&#x27;</span>&#125;<br><span class="hljs-meta">&gt;&gt;&gt; </span>&#123;<span class="hljs-string">&quot;x的小写16进制值是：&#123;:x&#125;&quot;</span>.<span class="hljs-built_in">format</span>(x)&#125;<br>&#123;<span class="hljs-string">&#x27;x的小写16进制值是：11c&#x27;</span>&#125;<br><span class="hljs-meta">&gt;&gt;&gt; </span>&#123;<span class="hljs-string">&quot;x的科学计数法表示为：&#123;:.2e&#125;&quot;</span>.<span class="hljs-built_in">format</span>(x)&#125;<br>&#123;<span class="hljs-string">&#x27;x的科学计数法表示为：2.84e+02&#x27;</span>&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="3、使用f-string"><a href="#3、使用f-string" class="headerlink" title="3、使用f-string"></a>3、使用f-string</h3><h3 id="4、-模板字符串"><a href="#4、-模板字符串" class="headerlink" title="4、 模板字符串"></a>4、 模板字符串</h3><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/library/stdtypes.html#old-string-formatting">https://docs.python.org/zh-cn/3.9/library/stdtypes.html#old-string-formatting</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
