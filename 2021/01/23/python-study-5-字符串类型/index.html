@@ -449,12 +449,11 @@
 ">[1]</span></a></sup></p>
 <h3 id="2、使用-format-方法"><a href="#2、使用-format-方法" class="headerlink" title="2、使用.format()方法"></a>2、使用.format()方法</h3><p>format()是Python语言str对象的内置方法。专门用于执行字符串格式化操作。 调用此方法的字符串可以包含字符串字面值或者以花括号 <code>&#123;&#125;</code> 括起来的替换域。 每个替换域可以包含一个位置参数的数字索引，或者一个关键字参数的名称。 返回的字符串副本中每个替换域都会被替换为对应参数的字符串值。</p>
 <ul>
-<li>用法：</li>
-</ul>
+<li><p>用法：</p>
 <blockquote>
 <p><strong>&lt;模板字符串&gt;.format(&lt;逗号分隔的参数&gt;)</strong></p>
 </blockquote>
-<ul>
+</li>
 <li><p>示例代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Hello,&#123;&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;Python&#x27;</span>)<br><span class="hljs-string">&#x27;Hello,Python&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;尊敬的 &#123;0&#125; 您好, 您 &#123;1:02d&#125; 月份的电费一共为 &#123;2:.2f&#125; 元，请及时交纳！&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;张小三&#x27;</span>,<span class="hljs-number">6</span>,<span class="hljs-number">385.47</span>)<br><span class="hljs-string">&#x27;尊敬的 张小三 您好, 您 06 月份的电费一共为 385.47 元，请及时交纳！&#x27;</span><br></code></pre></td></tr></table></figure>
 <p>其中：<code>&#123;&#125;</code> 称为槽。 format()中以逗号分隔的部分称为参数，用于填充到槽中。参数是有先后顺序的，索引从0开始。在槽中可以不按参数顺序进行填充，只要显式指明要填充的是哪个索引的参数即可。</p>
@@ -484,9 +483,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/python/">python</a>
-                    
                       <a class="hover-with-bg" href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
                     
                   </div>
                 
