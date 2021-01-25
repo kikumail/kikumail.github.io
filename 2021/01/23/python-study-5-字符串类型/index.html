@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.8k 字
+      2.2k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      25
        分钟
     </span>
   
@@ -228,7 +228,7 @@
             <h1 style="display: none">Python学习笔记-字符串类型</h1>
             
             <div class="markdown-body">
-              <h1 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h1><p>字符串：由0个或者多个字符组成的有序字符序列，在python中有多种表示方式。</p>
+              <h1 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h1><p>字符串：由0个或者多个字符组成的有序字符序列。在 Python 中处理文本数据是使用 <code>str </code>对象，也称为 <em>字符串</em>。 字符串是由 Unicode 码构成的不可变序列。在python中有多种表示方式。</p>
 <h2 id="一、字符串表示与使用"><a href="#一、字符串表示与使用" class="headerlink" title="一、字符串表示与使用"></a>一、字符串表示与使用</h2><h3 id="字符串的表示"><a href="#字符串的表示" class="headerlink" title="字符串的表示"></a>字符串的表示</h3><ol>
 <li>用一对单引号表示，如‘C’</li>
 <li>用一对双引号表示，如”请输入正确的温度格式！”</li>
@@ -387,7 +387,7 @@
 <td>ord(a)  结果为97</td>
 </tr>
 </tbody></table>
-<h2 id="三、字符串处理方法"><a href="#三、字符串处理方法" class="headerlink" title="三、字符串处理方法"></a>三、字符串处理方法</h2><p>​        在Python语言中，字符串本身提供了很多方法来处理字符串。这些方法以小数点（.）加上方法名的形式调用。特别注意：在Python语言中定义的字符串都是不可改变的，以下操作若返回字符串，都会生成新字符串。</p>
+<h2 id="三、字符串处理方法"><a href="#三、字符串处理方法" class="headerlink" title="三、字符串处理方法"></a>三、字符串处理方法</h2><p>​        在Python语言中，字符串（str）对象本身提供了很多方法来处理字符串。这些方法以小数点（.）加上方法名的形式调用。特别注意：在Python语言中定义的字符串都是不可改变的，以下操作若返回字符串，都会生成新字符串。</p>
 <table>
 <thead>
 <tr>
@@ -437,8 +437,8 @@
 <td>“-“.join(“hello”) 结果为’h-e-l-l-o’</td>
 </tr>
 </tbody></table>
-<h2 id="四、字符串格式化"><a href="#四、字符串格式化" class="headerlink" title="四、字符串格式化"></a>四、字符串格式化</h2><p>Python语言提供了大概四种功能丰富的字符串格式化方法。</p>
-<h3 id="1、使用-符号的类printf-风格"><a href="#1、使用-符号的类printf-风格" class="headerlink" title="1、使用 % 符号的类printf()风格"></a>1、使用 % 符号的类printf()风格</h3><p>​        %常被称为插值运算符，是一种类似于c语言中的printf（）函数的格式化方法，官方文档称其“格式化操作具有多种怪异特性，可能导致许多常见错误”。以下为原文：</p>
+<h2 id="四、字符串格式化"><a href="#四、字符串格式化" class="headerlink" title="四、字符串格式化"></a>四、字符串格式化</h2><p>在实际编程过程中，我们经常需要将各种数据结构转化为字符串类型进行处理或者输出。Python语言提供了大概四种功能丰富的字符串格式化方法。</p>
+<h3 id="1、使用-符号的类printf-风格"><a href="#1、使用-符号的类printf-风格" class="headerlink" title="1、使用 % 符号的类printf()风格"></a>1、使用<code> %</code> 符号的类printf()风格</h3><p>​        <code>%</code>常被称为插值运算符，是一种类似于c语言中的printf（）函数的格式化方法，官方文档称其“格式化操作具有多种怪异特性，可能导致许多常见错误”。以下为原文：</p>
 <blockquote>
 <p>此处介绍的格式化操作具有多种怪异特性，可能导致许多常见错误（例如无法正确显示元组和字典）。 使用较新的 <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/reference/lexical_analysis.html#f-strings">格式化字符串字面值</a>，<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/library/stdtypes.html#str.format"><code>str.format()</code></a> 接口或 <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/library/string.html#template-strings">模板字符串</a> 有助于避免这样的错误。 这些替代方案中的每一种都更好地权衡并提供了简单、灵活以及可扩展性优势。</p>
 </blockquote>
@@ -447,7 +447,26 @@
 <p>代码说明：<code>%</code>就是用来格式化字符串的插值运算符（又称占位符）。在字符串内部，<code>%s</code>表示用字符串替换；<code>%02d</code>表示用整数替换且长度为2位，不足2位前面补0；<code>%.1f</code>表示用浮点数替换且保留1位小数。有几个<code>%?</code>占位符，后面就跟几个变量或者值，顺序要一一对应。如果只有一个<code>%?</code>，后面的括号可以省略。</p>
 <p><strong><em>更复杂的使用可参考官方文档</em></strong><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://docs.python.org/zh-cn/3.9/library/stdtypes.html#old-string-formatting
 ">[1]</span></a></sup></p>
-<h3 id="2、使用-format-函数"><a href="#2、使用-format-函数" class="headerlink" title="2、使用.format()函数"></a>2、使用.format()函数</h3><h3 id="3、使用f-string"><a href="#3、使用f-string" class="headerlink" title="3、使用f-string"></a>3、使用f-string</h3><h3 id="4、-模板字符串"><a href="#4、-模板字符串" class="headerlink" title="4、 模板字符串"></a>4、 模板字符串</h3><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/library/stdtypes.html#old-string-formatting">https://docs.python.org/zh-cn/3.9/library/stdtypes.html#old-string-formatting</a>
+<h3 id="2、使用-format-方法"><a href="#2、使用-format-方法" class="headerlink" title="2、使用.format()方法"></a>2、使用.format()方法</h3><p>format()是Python语言str对象的内置方法。专门用于执行字符串格式化操作。 调用此方法的字符串可以包含字符串字面值或者以花括号 <code>&#123;&#125;</code> 括起来的替换域。 每个替换域可以包含一个位置参数的数字索引，或者一个关键字参数的名称。 返回的字符串副本中每个替换域都会被替换为对应参数的字符串值。</p>
+<ul>
+<li>用法：</li>
+</ul>
+<blockquote>
+<p><strong>&lt;模板字符串&gt;.format(&lt;逗号分隔的参数&gt;)</strong></p>
+</blockquote>
+<ul>
+<li><p>示例代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Hello,&#123;&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;Python&#x27;</span>)<br><span class="hljs-string">&#x27;Hello,Python&#x27;</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;尊敬的 &#123;0&#125; 您好, 您 &#123;1:02d&#125; 月份的电费一共为 &#123;2:.2f&#125; 元，请及时交纳！&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;张小三&#x27;</span>,<span class="hljs-number">6</span>,<span class="hljs-number">385.47</span>)<br><span class="hljs-string">&#x27;尊敬的 张小三 您好, 您 06 月份的电费一共为 385.47 元，请及时交纳！&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>其中：<code>&#123;&#125;</code> 称为槽。 format()中以逗号分隔的部分称为参数，用于填充到槽中。参数是有先后顺序的，索引从0开始。在槽中可以不按参数顺序进行填充，只要显式指明要填充的是哪个索引的参数即可。</p>
+</li>
+<li><p>格式控制信息</p>
+<p>在槽内除了可以指定参数序号还可以指定填充的格式，称为<code>格式控制标记</code>。</p>
+<blockquote>
+<p><strong>{&lt;参数序号&gt;: &lt;格式控制标记&gt;}</strong></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="3、使用f-string"><a href="#3、使用f-string" class="headerlink" title="3、使用f-string"></a>3、使用f-string</h3><h3 id="4、-模板字符串"><a href="#4、-模板字符串" class="headerlink" title="4、 模板字符串"></a>4、 模板字符串</h3><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.9/library/stdtypes.html#old-string-formatting">https://docs.python.org/zh-cn/3.9/library/stdtypes.html#old-string-formatting</a>
 <a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
